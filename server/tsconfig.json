@@ -1,0 +1,26 @@
+{
+  "extends": "../tsconfig.base.json",
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "types": ["node"],
+    
+    // From parent directory, so we can access shared code
+    "rootDir": "..", 
+    // Compile output to dist folder in the server directory
+    "outDir": "./dist", 
+
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    
+    "paths": {
+      "@shared/*": ["../shared/src/*"]
+    }
+  },
+  "include": [
+    "src",
+    "../shared/src" 
+  ]
+}

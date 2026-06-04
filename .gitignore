@@ -1,7 +1,11 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# IMPORTANT: DO NOT ignore pnpm-lock.yaml - COMMIT it to GitHub!
+pnpm-store/          # Ignore the pnpm store directory
+.pnpm-debug.log*
 
-# dependencies
 /node_modules
+/client/node_modules
+/server/node_modules
+/shared/node_modules
 /.pnp
 .pnp.*
 .yarn/*
@@ -9,33 +13,191 @@
 !.yarn/plugins
 !.yarn/releases
 !.yarn/versions
+jspm_packages/
+bower_components/
 
-# testing
-/coverage
-
-# next.js
+/client/.next/
+/client/out/
+/server/.next/
+/server/out/
 /.next/
 /out/
 
-# production
+# Next.js cache and debug files
+/client/.next/cache/
+/server/.next/cache/
+.next/cache/
+*.tsbuildinfo
+next-env.d.ts
+/client/.next/trace
+/server/.next/trace
+/client/.next/types/
+/server/.next/types/
+
 /build
+/dist/
+/dist-ssr/
+/client/build
+/server/build
+/shared/dist
 
-# misc
+.env
+.env*.local
+.env.*.local
+.env.development
+.env.test
+.env.production
+.env.development.local
+.env.test.local
+.env.production.local
+.env*.secret
+*.env
+!.env.example
+!.env.template
+
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+.history/
+.vscode-test/
+.idea_modules/
+*.iml
+
 .DS_Store
-*.pem
+.DS_Store?
+.AppleDouble
+.LSOverride
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.lnk
+*.tmp
+*.temp
+*.cache
 
-# debug
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-.pnpm-debug.log*
+pnpm-debug.log*
+lerna-debug.log*
+*.pid
+*.seed
+*.pid.lock
+logs/
+*.log
 
-# env files (can opt-in for committing if needed)
-.env*
+/coverage
+/.coverage
+.nyc_output/
+*.lcov
+__pycache__/
+*.pyc
+test-results/
+playwright-report/
+junit.xml
 
-# vercel
+# Vercel
 .vercel
+.vercel_build_output/
+vercel.json
+.vercelignore
 
-# typescript
+# Netlify
+.netlify/
+netlify/
+/.netlify-build/
+
+.cache/
+.parcel-cache/
+.eslintcache
+.prettiercache
+.turbo/
+.c8/
+.nx/
+.tscache/
 *.tsbuildinfo
-next-env.d.ts
+.cache-loader/
+temp/
+tmp/
+*.tmp
+*.temp
+
+# IMPORTANT: DO NOT ignore pnpm-lock.yaml
+.npm
+.npmrc
+.yarnrc.yml
+.yarnrc
+.pnpmfile.cjs
+
+# Security
+*.pem
+*.key
+*.crt
+*.cer
+*.p12
+secrets/
+.ssl/
+
+# Archives
+*.tgz
+*.gz
+*.rar
+*.7z
+*.zip
+*.tar
+*.tar.gz
+
+# Docker
+.docker/
+docker-compose.override.yml
+Dockerfile.dev
+docker-compose.dev.yml
+
+# Error tracking
+@sentry/
+sentry-debug.log*
+sentry-error.log*
+
+# Profiling
+profile-*.json
+*.trace
+.chromium/
+heap-snapshot-*.heapsnapshot
+
+# Local configuration overrides
+*.local.json
+*.local.config.js
+.config.local.js
+*.local.ts
+*.local.tsx
+
+# Backup files
+*.bak
+*.backup
+*.old
+*.orig
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Workspace specific builds
+/client/dist/
+/server/dist/
+/shared/dist/
+/client/build/
+/server/build/
+
+# Workspace specific temp files
+/client/.temp/
+/server/.temp/
+/shared/.temp/

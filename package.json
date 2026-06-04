@@ -1,26 +1,47 @@
 {
-  "name": "my-next-app",
-  "version": "0.1.0",
+  "name": "tele-med",
   "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "workspaces": [
+    "client",
+    "server",
+    "shared"
+  ],
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "pnpm --filter client dev",
+    "build": "pnpm -r build",
     "start": "next start",
     "lint": "eslint"
   },
-  "dependencies": {
+    "dependencies": {
+    "@hookform/resolvers": "^5.2.2",
+    "axios": "^1.16.0",
+    "clsx": "^2.1.1",
+    "date-fns": "^4.1.0",
     "next": "16.2.4",
     "react": "19.2.4",
-    "react-dom": "19.2.4"
+    "react-dom": "19.2.4",
+    "react-hook-form": "^7.75.0",
+    "zod": "^4.4.3",
+    "zustand": "^5.0.13"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "autoprefixer": "^10.5.0",
     "eslint": "^9",
     "eslint-config-next": "16.2.4",
+    "postcss": "^8.5.14",
     "tailwindcss": "^4",
     "typescript": "^5"
-  }
+  },
+  
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.33.2"
 }
