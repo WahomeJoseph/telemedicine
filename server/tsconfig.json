@@ -6,9 +6,7 @@
     "moduleResolution": "NodeNext",
     "types": ["node"],
     
-    // From parent directory, so we can access shared code
     "rootDir": "..", 
-    // Compile output to dist folder in the server directory
     "outDir": "./dist", 
 
     "strict": true,
