@@ -6,6 +6,7 @@
     "moduleResolution": "NodeNext",
     "types": ["node"],
     
+    "rootDirs": ["./src", "../shared/src"],
     "rootDir": "..", 
     "outDir": "./dist", 
 
