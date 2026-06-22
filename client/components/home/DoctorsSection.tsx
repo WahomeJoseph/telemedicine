@@ -52,7 +52,7 @@ export function DoctorsSection() {
                     <h2 className="text-xl md:text-lg uppercase font-bold text-foreground">
                         Our <span className="text-primary">Team</span>
                     </h2>
-                    <p className="text-3xl text-muted-foreground capitalize">
+                    <p className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                         Meet the dedicated professionals driving our healthcare services
                     </p>
                 </div>

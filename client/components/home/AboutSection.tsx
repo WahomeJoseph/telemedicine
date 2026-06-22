@@ -4,10 +4,10 @@ import { Card } from '@/components/ui/Card';
 
 export function AboutSection() {
     const aboutStats = [
-        { value: '10k+', label: 'Happy Patients' },
-        { value: '15+', label: 'Years Experience' },
-        { value: '50+', label: 'Expert Doctors' },
-        { value: '98%', label: 'Patient Satisfaction' },
+        { value: '2k+', label: 'Happy Patients' },
+        { value: '5+', label: 'Years Experience' },
+        { value: '5+', label: 'Expert Doctors' },
+        { value: '99%', label: 'Patient Satisfaction' },
     ];
 
     return (
