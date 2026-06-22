@@ -1,10 +1,3 @@
-export const STATS = [
-  { value: '150+', label: 'Best Doctors', iconName: 'Stethoscope', sub: 'Expert physicians' },
-  { value: '200+', label: 'Professional Nurses', iconName: 'Users', sub: 'Caring staff' },
-  { value: '24/7', label: 'Patient Capacity', iconName: 'Activity', sub: 'Always available' },
-  { value: '50+', label: 'Available Doctors', iconName: 'Award', sub: 'Ready to help' },
-];
-
 export const SERVICES = [
   { icon: '💬', title: 'Free Consultation', desc: 'Initial assessment and medical advice.', color: 'from-blue-500 to-cyan-500' },
   { icon: '🩺', title: 'Primary HealthCare', desc: 'Board-certified physicians for everyday health concerns.', color: 'from-blue-500 to-cyan-500' },

@@ -10,7 +10,7 @@ import { HowItWorksSection } from '@/components/home/HowItWorksSection';
 import { TestimonialsSkeleton } from '@/components/home/features/TestimonialsSkeleton';
 import { PartnersSkeleton } from '@/components/home/features/PartnersSkeleton';
 import { FAQSkeleton } from '@/components/home/features/FAQSkeleton';
-import { STATS, SERVICES, PARTNERS, HOW_IT_WORKS } from '@/libs/constants/HomeData';
+import { SERVICES, PARTNERS, HOW_IT_WORKS } from '@/libs/constants/HomeData';
 import { DoctorsSection } from '@/components/home/DoctorsSection'
 import { TestimonialsSection } from '@/components/home/TestimonialSection';
 import { PartnersSection } from '@/components/home/PartnersSection';
@@ -66,7 +66,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-white">
       <Suspense fallback={<HeroSkeleton />}>
-        <HeroSection stats={STATS} />
+        <HeroSection />
       </Suspense>
 
       {/* Services Section */}
