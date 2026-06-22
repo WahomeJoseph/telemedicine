@@ -128,12 +128,11 @@ export function DoctorsSection() {
                     ))}
                 </div>
 
-                {/* View All Doctors Button */}
                 <div className="text-center mt-12">
                     <Button
                         variant="outline" size="lg" className="hover:scale-105 transition-transform">
-                        <Link href="/doctors">
-                            View All Doctors →
+                        <Link href="/contact-us">
+                            Visit Our Facility
                         </Link>
                     </Button>
                 </div>

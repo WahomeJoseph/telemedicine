@@ -75,7 +75,7 @@ export function HeroSection() {
                                 Book Appointment
                             </Link>
                             <Link
-                                href="/services"
+                                href="/our-services"
                                 className="px-7 py-3.5 text-slate-400 rounded-xl shadow-md hover:text-white text-sm font-medium transition-colors duration-300 inline-flex items-center gap-1 hover:bg-gradient-to-r from-primary to-accent"
                             >
                                 View services
