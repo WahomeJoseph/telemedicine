@@ -105,13 +105,13 @@ export function FAQSection({ faqs = defaultFaqs }: FAQSectionProps) {
                         </p>
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
                             <div className="flex items-center justify-center gap-6">
-                                <Link href="tel:+2547975969757" className="w-12 h-12 flex items-center justify-center rounded-full bg-white/20 hover:bg-white/30 transition duration-300 group">
+                                <Link href="tel:+254768166223" className="w-12 h-12 flex items-center justify-center rounded-full bg-white/20 hover:bg-white/30 transition duration-300 group">
                                     <Phone className="w-5 h-5 text-white group-hover:scale-110 transition-transform" />
                                 </Link>
-                                <Link href="mailto:info@biomedpharm.com" className="w-12 h-12 flex items-center justify-center rounded-full bg-white/20 hover:bg-white/30 transition duration-300 group">
+                                <Link href="mailto:lewisgichohi6@gmail.com" className="w-12 h-12 flex items-center justify-center rounded-full bg-white/20 hover:bg-white/30 transition duration-300 group">
                                     <Mail className="w-5 h-5 text-white group-hover:scale-110 transition-transform" />
                                 </Link>
-                                <Link href="https://wa.me/2547975969757" target="_blank" className="w-12 h-12 flex items-center justify-center rounded-full bg-white/20 hover:bg-white/30 transition duration-300 group">
+                                <Link href="https://wa.me/254768166223" target="_blank" className="w-12 h-12 flex items-center justify-center rounded-full bg-white/20 hover:bg-white/30 transition duration-300 group">
                                     <svg className="w-5 h-5 text-white group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24">
                                         <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448L.057 24zm6.164-4.146l.362.215c1.562.926 3.36 1.417 5.205 1.417 5.424 0 9.839-4.414 9.841-9.838.001-2.627-1.022-5.099-2.879-6.958-1.856-1.858-4.327-2.882-6.955-2.882-5.424 0-9.839 4.415-9.841 9.84 0 2.131.673 4.206 1.94 5.934l.252.342-.997 3.637 3.852-1.012z" />
                                     </svg>

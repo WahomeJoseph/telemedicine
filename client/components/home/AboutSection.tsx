@@ -16,7 +16,7 @@ export function AboutSection() {
                 <div className="flex items-center justify-center mb-12">
                     <div className="flex-grow h-px bg-gradient-to-r from-transparent via-primary to-transparent max-w-[150px]" />
                     <h2 className="mx-6 text-3xl md:text-4xl font-bold text-foreground">
-                        Why Choose <span className="text-primary">BioMedPharm</span>
+                        Why Choose <span className="text-primary">BioMedLink</span>
                     </h2>
                     <div className="flex-grow h-px bg-gradient-to-r from-transparent via-primary to-transparent max-w-[150px]" />
                 </div>
@@ -24,13 +24,13 @@ export function AboutSection() {
                 <div className="grid lg:grid-cols-2 gap-16 items-center">
                     <div className="space-y-6">
                         <p className="text-lg text-muted-foreground text-justify leading-relaxed">
-                            Founded in 2010 with a vision to revolutionize healthcare in Kenya, BioMedPharm has grown into
+                            Founded in 2025 with a vision to revolutionize healthcare in Kenya, BioMedLink has grown into
                             the region&apos;s most trusted medical facility. Our journey began when our founder recognized the
                             critical need for quality, accessible healthcare services.
                         </p>
                         <p className="text-lg text-muted-foreground text-justify leading-relaxed">
-                            Today, we operate a modern medical facility with over 50 experienced doctors, employ more than
-                            200 healthcare professionals, and have successfully treated over 50,000 patients across Kenya.
+                            Today, we operate a modern medical facility, BioMedPharm, with experienced doctors and nurses, employ the best
+                            healthcare professionals, and have successfully treated over 2,000 patients across Nairobi.
                         </p>
 
                         <div className="grid grid-cols-2 gap-5 mt-8">

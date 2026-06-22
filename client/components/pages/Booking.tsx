@@ -192,7 +192,7 @@ export default function BookAppointmentPage() {
                         <div className="shrink-0 flex items-center justify-center px-0">
                             <Image
                                 src="/logo.png"
-                                alt="BioMedPharm"
+                                alt="BioMedLink Logo"
                                 width={80}
                                 height={80}
                                 className="object-contain"

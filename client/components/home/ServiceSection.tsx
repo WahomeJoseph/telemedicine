@@ -56,17 +56,16 @@ export function ServicesSection({ services }: ServicesSectionProps) {
                                 Comprehensive Healthcare Solutions for All Your Needs
                             </h3>
                             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-                                At BioMedPharm, we provide comprehensive medical services designed to meet the unique
-                                healthcare needs of every patient. Our modern facilities, experienced doctors, and advanced
+                                In collaboration with BioMedPharm, BioMedPharm provides comprehensive medical services designed to meet the unique
+                                healthcare needs of every patient. Our modern facilities, experienced doctors, nurses and advanced
                                 medical technology ensure you receive the best possible care.
                             </p>
                             <p className="text-lg text-muted-foreground leading-relaxed">
                                 From routine checkups to specialized treatments, we handle it all with the professionalism
-                                and compassion that has made us the trusted choice for over 10,000 patients across Kenya.
+                                and compassion that has made us the trusted choice for over 2,000 patients across Nairobi.
                             </p>
                         </div>
 
-                        {/* Service Cards Grid */}
                         <div className="grid grid-cols-2 gap-4">
                             {services.slice(0, 4).map((service) => (
                                 <div key={service.title} className="bg-gray-50 rounded-xl p-4 hover:shadow-lg transition-all duration-300 group">

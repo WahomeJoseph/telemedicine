@@ -119,7 +119,7 @@ export default function AdminDashboardLayout({ children }: { children: React.Rea
                             <div className="shrink-0 flex items-center justify-center px-0">
                                 <Image
                                     src="/logo.png"
-                                    alt="BioMedPharm"
+                                    alt="BioMedLink Logo"
                                     width={80}
                                     height={80}
                                     className="object-contain"
@@ -127,7 +127,7 @@ export default function AdminDashboardLayout({ children }: { children: React.Rea
                                 />
                             </div>
                             <div>
-                                <span className="font-bold text-foreground text-lg">BioMedPharm</span>
+                                <span className="font-bold text-foreground text-lg">BioMedLink</span>
                                 <span className="text-xs text-primary block -mt-1">Admin Portal</span>
                             </div>
                         </Link>

@@ -6,12 +6,16 @@ export const STATS = [
 ];
 
 export const SERVICES = [
-  { icon: '🩺', title: 'Primary Care', desc: 'Board-certified physicians for everyday health concerns.', color: 'from-blue-500 to-cyan-500' },
+  { icon: '💬', title: 'Free Consultation', desc: 'Initial assessment and medical advice.', color: 'from-blue-500 to-cyan-500' },
+  { icon: '🩺', title: 'Primary HealthCare', desc: 'Board-certified physicians for everyday health concerns.', color: 'from-blue-500 to-cyan-500' },
   { icon: '⚡', title: 'Emergency Care', desc: '24/7 emergency services for critical conditions.', color: 'from-red-500 to-orange-500' },
-  { icon: '🧠', title: 'Mental Health', desc: 'Licensed therapists and psychiatrists.', color: 'from-purple-500 to-pink-500' },
-  { icon: '👶', title: 'Pediatrics', desc: 'Specialized care for children.', color: 'from-green-500 to-teal-500' },
+  { icon: '🧠', title: 'Home Based Care', desc: 'Registered nurses providing care at home.', color: 'from-purple-500 to-pink-500' },
+  { icon: '👶', title: 'Pediatrics - Mother and Child Care ', desc: 'Specialized care for mothers and children.', color: 'from-green-500 to-teal-500' },
+  { icon: '👪', title: 'Family Planning', desc: 'Comprehensive family planning services.', color: 'from-yellow-500 to-orange-500' },
+  { icon: '🧑‍⚕️', title: 'Specialist Referrals', desc: 'Access to top specialists across Kenya.', color: 'from-yellow-500 to-orange-500' },
+  { icon: '🏥', title: 'Outpatient Services', desc: 'Convenient care for non-emergency conditions.', color: 'from-yellow-500 to-orange-500' },
   { icon: '💊', title: 'Pharmacy', desc: 'Prescription medications delivered.', color: 'from-indigo-500 to-blue-500' },
-  { icon: '🔬', title: 'Lab Services', desc: 'Fast and accurate diagnostic tests.', color: 'from-cyan-500 to-teal-500' },
+  { icon: '🔬', title: 'HIV Testing and Counseling', desc: 'Comprehensive testing and support services.', color: 'from-cyan-500 to-teal-500' },
 ];
 
 export const DOCTORS = [

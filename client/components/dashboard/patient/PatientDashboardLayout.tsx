@@ -79,7 +79,7 @@ export default function PatientDashboardLayout({ children }: { children: React.R
               <div className="shrink-0 flex items-center justify-center px-0" style={{ minHeight: "80px" }}>
                 <Image
                   src="/logo.png"
-                  alt="BioMedPharm"
+                  alt="BioMedLink Logo"
                   width={100}
                   height={100}
                   className="object-contain"
@@ -87,7 +87,7 @@ export default function PatientDashboardLayout({ children }: { children: React.R
                 />
               </div>
               <div>
-                <span className="font-bold text-foreground text-lg">BioMedPharm</span>
+                <span className="font-bold text-foreground text-lg">BioMedLink</span>
                 <span className="text-xs text-primary block -mt-1">Patient Portal</span>
               </div>
             </Link>

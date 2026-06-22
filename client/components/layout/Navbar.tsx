@@ -28,9 +28,8 @@ export default function Navbar() {
   };
 
   const navLinks = [
-    { href: '/about', label: 'About Us' },
-    { href: '/services', label: 'Services' },
-    { href: '/how-it-works', label: 'How it works' },
+    { href: '/about-us', label: 'About Us' },
+    { href: '/our-services', label: 'Our Services' },
     { href: '/contact-us', label: 'Contact Us' },
   ];
 
@@ -40,7 +39,6 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
@@ -67,20 +65,20 @@ export default function Navbar() {
           <div className="flex items-center space-x-8 mr-6">
             <div className="flex flex-row items-center space-x-2">
               <Link
-                href="tel:+2547975969757"
+                href="tel:+254768166223"
                 className="flex flex-row items-center space-x-2 hover:text-primary transition-all duration-200 group"
               >
                 <Phone className="w-4 h-4 text-primary group-hover:scale-110 transition-transform" />
-                <span className="group-hover:text-primary">+254 797 596 9757</span>
+                <span className="group-hover:text-primary">+254 768 166 223</span>
               </Link>
             </div>
             <div className="flex flex-row items-center space-x-2">
               <Link
-                href="mailto:josephwachira589@gmail.com"
+                href="mailto:lewisgichohi6@gmail.com"
                 className="flex flex-row items-center space-x-2 hover:text-primary transition-all duration-200 group"
               >
                 <Mail className="w-4 h-4 text-primary group-hover:scale-110 transition-transform" />
-                <span className="group-hover:text-primary">josephwachira589@gmail.com</span>
+                <span className="group-hover:text-primary">lewisgichohi6@gmail.com</span>
               </Link>
             </div>
             <div className="flex flex-row items-center space-x-2">
@@ -108,7 +106,7 @@ export default function Navbar() {
           >
             <Image
               src="/logo.png"
-              alt="BioMedPharm"
+              alt="BioMedLink Logo"
               width={100}
               height={100}
               className="object-contain scale-120"

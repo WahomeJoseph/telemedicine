@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 
 export default function LoginPage() {
   const heroContent = {
-    title: 'Welcome Back To BioMedPharm!',
+    title: 'Welcome Back To BioMedLink!',
     subtitle: 'Sign in to continue your healthcare journey',
     features: [
       { icon: 'FaUserMd', text: 'Access your medical records' },
