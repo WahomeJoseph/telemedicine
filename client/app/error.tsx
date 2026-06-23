@@ -1,9 +1,11 @@
 'use client';
 
 import { useEffect } from 'react';
-import { Button } from '@/components/ui/Button';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { AlertTriangle, ArrowRight, RotateCcw } from 'lucide-react';
 
-export default function Error({
+export default function GlobalError({
     error,
     reset,
 }: {
@@ -11,25 +13,57 @@ export default function Error({
     reset: () => void;
 }) {
     useEffect(() => {
-        console.error('Homepage error:', error);
+        console.error('Application error:', error);
     }, [error]);
 
     return (
-        <div className="min-h-screen flex items-center justify-center px-4">
-            <div className="text-center max-w-md">
-                <div className="w-20 h-20 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <svg className="w-10 h-10 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-                    </svg>
+        <div className="min-h-screen bg-slate-50 flex items-center justify-center px-4">
+            <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                className="text-center max-w-md"
+            >
+                {/* Icon */}
+                <div className="w-16 h-16 mx-auto mb-6 bg-red-100 rounded-2xl flex items-center justify-center">
+                    <AlertTriangle className="w-8 h-8 text-red-500" />
                 </div>
-                <h2 className="text-2xl font-bold text-foreground mb-2">Failed to load homepage</h2>
-                <p className="text-muted-foreground mb-6">
-                    We&apos;re having trouble loading the content. Please try again.
+
+                {/* Message */}
+                <h1 className="text-2xl font-bold text-gray-900 mb-2">
+                    Something went wrong
+                </h1>
+                <p className="text-gray-500 text-sm leading-relaxed mb-8">
+                    We hit an unexpected error. This has been logged and
+                    we&apos;re looking into it. You can try again or head back
+                    home.
                 </p>
-                <Button onClick={reset} variant="primary">
-                    Try again
-                </Button>
-            </div>
+
+                {/* Actions */}
+                <div className="flex items-center justify-center gap-4">
+                    <button
+                        onClick={reset}
+                        className="px-6 py-3 bg-cyan-600 hover:bg-cyan-500 text-white rounded-xl font-semibold transition-colors duration-300 inline-flex items-center gap-2 text-sm"
+                    >
+                        <RotateCcw className="w-4 h-4" />
+                        Try Again
+                    </button>
+                    <Link
+                        href="/"
+                        className="text-gray-500 hover:text-gray-900 text-sm font-medium transition-colors inline-flex items-center gap-1"
+                    >
+                        Go home
+                        <ArrowRight className="w-3.5 h-3.5" />
+                    </Link>
+                </div>
+
+                {/* Error digest — helpful for support */}
+                {error.digest && (
+                    <p className="mt-8 text-xs text-gray-300">
+                        Error ID: {error.digest}
+                    </p>
+                )}
+            </motion.div>
         </div>
     );
 }

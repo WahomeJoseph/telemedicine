@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css"
 import NavbarWrapper from "./NavbarWrapper";
+import { Footer } from "@/components/layout/Footer";  
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000'),
@@ -57,6 +58,7 @@ export default function RootLayout({
       <body>
         <NavbarWrapper />
         {children}
+        <Footer/>
       </body>
     </html>
   );

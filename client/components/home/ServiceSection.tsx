@@ -1,6 +1,4 @@
 import Image from 'next/image';
-import Link from 'next/link';
-import { Button } from '@/components/ui/Button';
 
 interface ServicesSectionProps {
     services: Array<{
@@ -31,7 +29,7 @@ export function ServicesSection({ services }: ServicesSectionProps) {
                             <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20" />
                             <div className="h-[500px] bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center">
                                 <Image
-                                    src="/surgery.jpg"
+                                    src="/hospital-bed.jpg"
                                     width={800}
                                     height={600}
                                     alt="Modern medical facility with advanced equipment"
@@ -74,11 +72,6 @@ export function ServicesSection({ services }: ServicesSectionProps) {
                                 </div>
                             ))}
                         </div>
-
-                        <Button
-                            variant="outline" className="mt-4">
-                            <Link href="/services">View All Services →</Link>
-                        </Button>
                     </div>
                 </div>
             </div>

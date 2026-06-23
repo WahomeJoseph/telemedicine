@@ -10,9 +10,10 @@ import {
 } from 'lucide-react';
 
 const ROTATING_WORDS = [
-    'Virtual Care',
-    'In-Person Visits',
-    'Recieve Medical Care',
+    'Virtual Care and Consultations',
+    'Schedule Appointments and Checkups',
+    'In-Person Visits at Our Clinic',
+    'Receive Home-Based Care',
 ];
 
 export function HeroSection() {
@@ -43,7 +44,7 @@ export function HeroSection() {
                         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.1] mb-6">
                             Healthcare
                             <br />
-                            that comes to you.
+                            that comes to you
                         </h1>
 
                         <div className="h-8 mb-8">
@@ -67,7 +68,7 @@ export function HeroSection() {
                             when you need care.
                         </p>
 
-                        <div className="flex items-center gap-6">
+                        <div className="flex items-center gap-2.5">
                             <Link
                                 href="/book-appointment"
                                 className="group px-7 py-3.5 bg-gradient-to-r from-primary to-accent text-white rounded-xl font-semibold transition-all duration-300 inline-flex items-center gap-2"

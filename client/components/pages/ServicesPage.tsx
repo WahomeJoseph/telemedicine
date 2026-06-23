@@ -54,7 +54,7 @@ const care_models = [
         label: 'Virtual Care',
         title: 'Healthcare from Anywhere',
         image: '/virtual-care.jpg',
-        description: 'Our telemedicine platform lets you consult licensed doctors via secure video — no travel, no waiting rooms. Ideal for follow-ups, mental health, and non-emergency consultations.',
+        description: 'Our telemedicine platform lets you consult licensed doctors via secure video - no travel, no waiting rooms. Ideal for follow-ups, mental health, and non-emergency consultations.',
         points: [
             'Video consultations on any device',
             'Digital prescriptions & sick notes',
@@ -67,7 +67,7 @@ const care_models = [
         label: 'Physical Facility',
         title: 'Hands-On When You Need It',
         image: '/inpatient-care.jpg',
-        description: 'Some things need a human touch. Our clinic is equipped for examinations, lab work, minor procedures, and vaccinations — with the same team you trust online.',
+        description: 'Some things need a human touch. Our clinic is equipped for examinations, lab work, minor procedures, and vaccinations - with the same team you trust online.',
         points: [
             'Modern, comfortable clinic space',
             'On-site lab & basic diagnostics',
@@ -94,7 +94,7 @@ const process = [
         step: '03',
         title: 'Get Your Care Plan',
         description:
-            'Receive your diagnosis, prescriptions, lab orders, or specialist referral — all documented in your secure patient portal.',
+            'Receive your diagnosis, prescriptions, lab orders, or specialist referral - all documented in your secure patient portal.',
     },
     {
         step: '04',
@@ -129,7 +129,7 @@ export function ServicesPage() {
                     <p className="text-gray-600 text-lg leading-relaxed">
                         Whether you need a virtual consultation from home, a
                         hands-on visit at our clinic, or a referral to a
-                        specialist - we&aposve got you covered. Quality
+                        specialist - we&apos;ve got you covered. Quality
                         healthcare, your way.
                     </p>
                 </motion.div>
@@ -151,7 +151,7 @@ export function ServicesPage() {
                         </h2>
                         <p className="text-gray-600 text-lg">
                             Choose the care model that fits your situation. Start
-                            anywhere - we&aposll guide you to the right path.
+                            anywhere - we&apos;ll guide you to the right path.
                         </p>
                     </motion.div>
 
@@ -221,7 +221,7 @@ export function ServicesPage() {
                         </h2>
                         <p className="text-gray-600 text-lg max-w-2xl mx-auto">
                             We combine the convenience of telemedicine with the reliability of a
-                            physical clinic — so you always get the right type of care.
+                            physical clinic - so you always get the right type of care.
                         </p>
                     </motion.div>
 
@@ -334,7 +334,7 @@ export function ServicesPage() {
                         </h2>
                         <p className="text-gray-600 text-lg max-w-2xl mx-auto">
                             A seamless experience from your first click to your
-                            follow-up — whether virtual or in-person.
+                            follow-up - whether virtual or in-person.
                         </p>
                     </motion.div>
 

@@ -2,7 +2,7 @@ export const SERVICES = [
   { icon: '💬', title: 'Free Consultation', desc: 'Initial assessment and medical advice.', color: 'from-blue-500 to-cyan-500' },
   { icon: '🩺', title: 'Primary HealthCare', desc: 'Board-certified physicians for everyday health concerns.', color: 'from-blue-500 to-cyan-500' },
   { icon: '⚡', title: 'Emergency Care', desc: '24/7 emergency services for critical conditions.', color: 'from-red-500 to-orange-500' },
-  { icon: '🧠', title: 'Home Based Care', desc: 'Registered nurses providing care at home.', color: 'from-purple-500 to-pink-500' },
+  { icon: '🏠', title: 'Home Based Care', desc: 'Registered nurses providing care at home.', color: 'from-purple-500 to-pink-500' },
   { icon: '👶', title: 'Pediatrics - Mother and Child Care ', desc: 'Specialized care for mothers and children.', color: 'from-green-500 to-teal-500' },
   { icon: '👪', title: 'Family Planning', desc: 'Comprehensive family planning services.', color: 'from-yellow-500 to-orange-500' },
   { icon: '🧑‍⚕️', title: 'Specialist Referrals', desc: 'Access to top specialists across Kenya.', color: 'from-yellow-500 to-orange-500' },
@@ -73,7 +73,7 @@ export const PARTNERS = [
   { name: 'Jubilee Insurance', logo: '/partners/jubilee.png' },
   { name: 'NHIF', logo: '/partners/nhif.png' },
   { name: 'CIC Insurance', logo: '/partners/cic.png' },
-  { name: 'Resolution Health', logo: '/partners/resolution.png' },
+  { name: 'Social Health Authority', logo: '/partners/sha.png' },
 ];
 
 export const HOW_IT_WORKS = [
