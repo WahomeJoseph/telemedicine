@@ -9,7 +9,6 @@ import {
     MapPin,
     Clock,
     Send,
-    ArrowRight,
     CheckCircle2,
     AlertCircle,
 } from 'lucide-react';
@@ -482,7 +481,7 @@ export function ContactPageSection() {
                     />
                 </motion.div>
             </div>
-
+            
         </section>
     );
 }
