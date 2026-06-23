@@ -9,9 +9,9 @@ import { AuthHero } from '@/components/auth/AuthHero'
 export const metadata: Metadata = {
   title: 'Create Account',
   description:
-    'Join MediConnect to access quality healthcare services, book appointments, and manage your health online.',
+    'Join BioMedLink to access quality healthcare services, book appointments, and manage your health online.',
   openGraph: {
-    title: 'Join MediConnect Healthcare Family',
+    title: 'Join BioMedLink Healthcare Family',
     description: 'Start your wellness journey with us',
     type: 'website',
   },

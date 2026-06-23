@@ -5,19 +5,19 @@ import { Footer } from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000'),
-  title: "MediConnect - Your Telemedicine Hub",
+  title: "BioMedLink - Your Telemedicine Hub",
   description: "Connect with top healthcare providers from the comfort of your home. Book appointments, access medical records, and get expert care online.",
   openGraph: {
-    title: "MediConnect - Your Telemedicine Hub",
+    title: "BioMedLink - Your Telemedicine Hub",
     description: "Connect with top healthcare providers from the comfort of your home. Book appointments, access medical records, and get expert care online.",
     url: process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000',
-    siteName: "MediConnect",
+    siteName: "BioMedLink",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "MediConnect Telemedicine Platform",
+        alt: "BioMedLink Telemedicine Platform",
       },
     ],
     locale: "en_US",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "MediConnect - Your Telemedicine Hub",
+    title: "BioMedLink - Your Telemedicine Hub",
     description: "Connect with top healthcare providers from the comfort of your home.",
     images: ["/twitter-image.jpg"],
   },

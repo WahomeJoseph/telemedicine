@@ -3,10 +3,10 @@ import { Suspense } from 'react';
 
 export const metadata: Metadata = {
     title: {
-        template: '%s | MediConnect',
+        template: '%s | BioMedLink',
         default: 'Authentication',
     },
-    description: 'Secure access to your MediConnect healthcare portal',
+    description: 'Secure access to your BioMedLink healthcare portal',
 };
 
 export default function AuthLayout({

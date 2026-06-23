@@ -20,7 +20,7 @@ export const DOCTORS = [
     image: '/doctors/cardiologist.jpg',
     linkedin: "https://linkedin.com/in/dr-sarah-johnson",
     twitter: "https://twitter.com/drsarahjohnson",
-    email: "sarah.johnson@mediconnect.com",
+    email: "sarah.johnson@biomedlink.com",
   },
   {
     name: 'Dr. Michael Chen',
@@ -30,7 +30,7 @@ export const DOCTORS = [
     image: '/doctors/neurologist.jpg',
     linkedin: "https://linkedin.com/in/dr-michael-chen",
     twitter: "https://twitter.com/drmichaelchen",
-    email: "michael.chen@mediconnect.com",
+    email: "michael.chen@biomedlink.com",
   },
   {
     name: 'Dr. Amina Hassan',
@@ -40,7 +40,7 @@ export const DOCTORS = [
     image: '/doctors/pediatrician.jpg',
     linkedin: "https://linkedin.com/in/dr-amina-hassan",
     twitter: "https://twitter.com/draminahassan",
-    email: "amina.hassan@mediconnect.com",
+    email: "amina.hassan@biomedlink.com",
   },
 ];
 

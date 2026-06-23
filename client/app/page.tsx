@@ -17,21 +17,21 @@ import { PartnersSection } from '@/components/home/PartnersSection';
 import { FAQSection } from '@/components/home/FAQSection';
 
 export const metadata: Metadata = {
-  title: 'MediConnect — Professional Healthcare Services | 24/7 Medical Care in Kenya',
-  description: 'Expert doctors and modern facilities. Book appointments, access emergency care, and get quality healthcare services at MediConnect. 24/7 medical support available.',
+  title: 'BioMedLink — Professional Healthcare Services | 24/7 Medical Care in Kenya',
+  description: 'Expert doctors and modern facilities. Book appointments, access emergency care, and get quality healthcare services at BioMedLink. 24/7 medical support available.',
   keywords: 'hospital, doctors, healthcare, medical clinic, emergency care, pharmacy, Nairobi hospital, telemedicine',
-  authors: [{ name: 'MediConnect' }],
+  authors: [{ name: 'BioMedLink' }],
   openGraph: {
-    title: 'MediConnect — Professional Healthcare Services',
+    title: 'BioMedLink — Professional Healthcare Services',
     description: 'Expert medical care at your service. Book appointments with top doctors in Kenya.',
-    url: 'https://mediconnect.com',
-    siteName: 'MediConnect',
+    url: 'https://biomedlink.com',
+    siteName: 'BioMedLink',
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'MediConnect Healthcare Services',
+        alt: 'BioMedLink Healthcare Services',
       },
     ],
     locale: 'en_KE',
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'MediConnect — Professional Healthcare Services',
+    title: 'BioMedLink — Professional Healthcare Services',
     description: 'Expert medical care at your service. Book appointments with top doctors.',
     images: ['/twitter-image.jpg'],
   },
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     google: 'your-google-verification-code',
   },
   alternates: {
-    canonical: 'https://mediconnect.com',
+    canonical: 'https://biomedlink.com',
   },
 };
 
@@ -107,9 +107,9 @@ export default function HomePage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "MedicalOrganization",
-            "name": "MediConnect",
-            "url": "https://mediconnect.com",
-            "logo": "https://mediconnect.com/logo.png",
+            "name": "BioMedLink",
+            "url": "https://biomedlink.com",
+            "logo": "https://biomedlink.com/logo.png",
             "contactPoint": {
               "@type": "ContactPoint",
               "telephone": "+2547975969757",
@@ -117,9 +117,9 @@ export default function HomePage() {
               "availableLanguage": ["English", "Swahili"]
             },
             "sameAs": [
-              "https://www.facebook.com/mediconnect",
-              "https://twitter.com/mediconnect",
-              "https://www.linkedin.com/company/mediconnect"
+              "https://www.facebook.com/biomedlink",
+              "https://twitter.com/biomedlink",
+              "https://www.linkedin.com/company/biomedlink"
             ],
             "medicalSpecialty": ["General Practice", "Cardiology", "Neurology", "Pediatrics"],
             "availableService": SERVICES.map(service => ({

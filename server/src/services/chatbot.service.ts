@@ -5,7 +5,7 @@ const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 const MODEL = process.env.OPENAI_MODEL || 'gpt-4o-mini';
 
 // System prompt with detailed instructions for the triage assistant
-const SYSTEM_PROMPT = `You are MediBot, a medical triage assistant for MediConnect Telemedicine.
+const SYSTEM_PROMPT = `You are MediBot, a medical triage assistant for bioMedLink Telemedicine.
 
 YOUR ROLE:
 - Help patients understand the urgency of their symptoms

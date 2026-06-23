@@ -42,7 +42,7 @@ chatRouter.post(
 
       const systemGreeting = {
         sender: ChatSender.BOT,
-        text: `👋 Hello! I'm MediBot, your MediConnect health assistant.\n\n${disclaimer}\n\nHow can I help you today?`,
+        text: `👋 Hello! I'm MediBot, your BioMedLink health assistant.\n\n${disclaimer}\n\nHow can I help you today?`,
         timestamp: new Date(),
         metadata: { isDisclaimer: true },
       };

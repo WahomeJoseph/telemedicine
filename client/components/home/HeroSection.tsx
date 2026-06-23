@@ -1,13 +1,9 @@
 'use client';
 
 import Link from 'next/link';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import {
-    Star,
-    Clock,
-    Video,
-} from 'lucide-react';
+import { Star, Clock, Video } from 'lucide-react';
 
 const ROTATING_WORDS = [
     'Virtual Care and Consultations',
@@ -16,8 +12,15 @@ const ROTATING_WORDS = [
     'Receive Home-Based Care',
 ];
 
+const HERO_IMAGES = [
+    '/surgery.jpg', // doctor with patient
+    '/surgery.jpg', // modern clinic interior
+    '/surgery.jpg', // virtual consultation
+];
+
 export function HeroSection() {
     const [currentWordIndex, setCurrentWordIndex] = useState(0);
+    const [currentImage, setCurrentImage] = useState(0);
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -26,13 +29,43 @@ export function HeroSection() {
         return () => clearInterval(interval);
     }, []);
 
+    const nextImage = useCallback(() => {
+        setCurrentImage((prev) => (prev + 1) % HERO_IMAGES.length);
+    }, []);
+
+    useEffect(() => {
+        const interval = setInterval(nextImage, 6000);
+        return () => clearInterval(interval);
+    }, [nextImage]);
+
     return (
-        <section className="relative min-h-screen flex items-center pt-10 bg-slate-950 overflow-hidden">
-            <div className="absolute inset-0" aria-hidden="true">
+        <section className="relative min-h-screen flex items-center pt-10 overflow-hidden">
+            {/* Sliding background images */}
+            <AnimatePresence mode="popLayout">
+                <motion.div
+                    key={currentImage}
+                    initial={{ opacity: 0, scale: 1.08 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 1.4, ease: 'easeInOut' }}
+                    className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+                    style={{
+                        backgroundImage: `url('${HERO_IMAGES[currentImage]}')`,
+                    }}
+                    aria-hidden="true"
+                />
+            </AnimatePresence>
+
+            {/* Color overlay */}
+            <div className="absolute inset-0 bg-gradient-to-br from-slate-950/90 via-slate-950/85 to-cyan-950/80" />
+
+            {/* Decorative blurs */}
+            <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
                 <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-cyan-500/[0.07] rounded-full blur-3xl" />
                 <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-teal-500/[0.05] rounded-full blur-3xl" />
             </div>
 
+            {/* Content */}
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full">
                 <div className="grid lg:grid-cols-2 gap-16 items-center">
                     <motion.div
@@ -40,7 +73,6 @@ export function HeroSection() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6 }}
                     >
-
                         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.1] mb-6">
                             Healthcare
                             <br />
@@ -91,7 +123,6 @@ export function HeroSection() {
                         className="hidden lg:block"
                     >
                         <div className="bg-white/[0.04] backdrop-blur-sm border border-white/[0.06] rounded-3xl p-8 relative">
-                            {/* Decorative corner */}
                             <div
                                 className="absolute -top-3 -right-3 w-20 h-20 bg-cyan-500/10 rounded-full blur-xl"
                                 aria-hidden="true"
@@ -142,6 +173,22 @@ export function HeroSection() {
                             </div>
                         </div>
                     </motion.div>
+                </div>
+
+                {/* Slide indicators — bottom of hero */}
+                <div className="flex justify-center lg:justify-start gap-2 mt-12">
+                    {HERO_IMAGES.map((_, i) => (
+                        <button
+                            key={i}
+                            onClick={() => setCurrentImage(i)}
+                            aria-label={`Go to slide ${i + 1}`}
+                            className={`h-1.5 rounded-full transition-all duration-500 ${
+                                i === currentImage
+                                    ? 'w-8 bg-cyan-400'
+                                    : 'w-4 bg-white/20 hover:bg-white/40'
+                            }`}
+                        />
+                    ))}
                 </div>
             </div>
         </section>
