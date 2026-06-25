@@ -6,11 +6,10 @@ import { ServicesSection } from '@/components/home/ServiceSection';
 import { ServicesSkeleton } from '@/components/home/features/ServicesSkeleton';
 import { AboutSection } from '@/components/home/AboutSection';
 import { DoctorsSkeleton } from '@/components/home/features/DoctorSkeleton';
-import { HowItWorksSection } from '@/components/home/HowItWorksSection';
 import { TestimonialsSkeleton } from '@/components/home/features/TestimonialsSkeleton';
 import { PartnersSkeleton } from '@/components/home/features/PartnersSkeleton';
 import { FAQSkeleton } from '@/components/home/features/FAQSkeleton';
-import { SERVICES, PARTNERS, HOW_IT_WORKS } from '@/libs/constants/HomeData';
+import { SERVICES, PARTNERS } from '@/libs/constants/HomeData';
 import { DoctorsSection } from '@/components/home/DoctorsSection'
 import { TestimonialsSection } from '@/components/home/TestimonialSection';
 import { PartnersSection } from '@/components/home/PartnersSection';
@@ -74,28 +73,25 @@ export default function HomePage() {
         <ServicesSection services={SERVICES} />
       </Suspense>
 
-      {/* About Section - Static */}
+      {/* About Section */}
       <AboutSection />
 
-      {/* Doctors Section - Lazy Load */}
+      {/* Doctors Section */}
       <Suspense fallback={<DoctorsSkeleton />}>
         <DoctorsSection />
       </Suspense>
 
-      {/* How It Works Section - Static */}
-      <HowItWorksSection steps={HOW_IT_WORKS} />
-
-      {/* Testimonials Section - Lazy Load */}
+      {/* Testimonials Section */}
       <Suspense fallback={<TestimonialsSkeleton />}>
         <TestimonialsSection />
       </Suspense>
 
-      {/* Partners Section - Lazy Load */}
+      {/* Partners Section */}
       <Suspense fallback={<PartnersSkeleton />}>
         <PartnersSection partners={PARTNERS} />
       </Suspense>
 
-      {/* FAQ Section - Lazy Load */}
+      {/* FAQ Section */}
       <Suspense fallback={<FAQSkeleton />}>
         <FAQSection />
       </Suspense>

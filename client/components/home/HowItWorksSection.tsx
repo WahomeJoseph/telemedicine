@@ -1,52 +1,69 @@
-import { Card } from '@/components/ui/Card';
+"use client";
 
-interface HowItWorksSectionProps {
-    steps: Array<{
-        step: string;
-        title: string;
-        desc: string;
-        icon: string;
-    }>;
-}
+import { motion } from "framer-motion";
 
-export function HowItWorksSection({ steps }: HowItWorksSectionProps) {
-    return (
-        <section className="py-20 bg-gray-50">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                {/* Section Header */}
-                <div className="flex items-center justify-center mb-12">
-                    <div className="flex-grow h-px bg-gradient-to-r from-transparent via-primary to-transparent max-w-[150px]" />
-                    <h2 className="mx-6 text-3xl md:text-4xl font-bold text-foreground">
-                        How It <span className="text-primary">Works</span>
-                    </h2>
-                    <div className="flex-grow h-px bg-gradient-to-r from-transparent via-primary to-transparent max-w-[150px]" />
-                </div>
+const process = [
+  {
+    step: "01",
+    title: "Choose Your Care Type",
+    description:
+      "Select virtual or in-person based on your needs. Not sure? Our intake form will recommend the best option.",
+  },
+  {
+    step: "02",
+    title: "See a Doctor",
+    description:
+      "Get matched with an available provider. Virtual patients connect in under 15 minutes walk-ins are seen same-day.",
+  },
+  {
+    step: "03",
+    title: "Get Your Care Plan",
+    description:
+      "Receive your diagnosis, prescriptions, lab orders, or specialist referral - all documented in your secure patient portal.",
+  },
+  {
+    step: "04",
+    title: "Follow-Up & Support",
+    description:
+      "We check in after your visit. Need a referral? We coordinate with partner specialists and transfer your records seamlessly.",
+  },
+];
 
-                {/* Steps Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    {steps.map((item, idx) => (
-                        <Card key={idx} className="text-center group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
-                            <div className="p-8">
-                                <div className="relative w-24 h-24 mx-auto bg-primary/10 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
-                                    <span className="text-3xl group-hover:text-white transition-colors">{item.icon}</span>
-                                    <div className="absolute -top-2 -right-2 w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center text-sm font-bold">
-                                        {item.step}
-                                    </div>
-                                </div>
-                                <h3 className="text-xl font-bold text-foreground mb-2">{item.title}</h3>
-                                <p className="text-muted-foreground">{item.desc}</p>
-                            </div>
-                        </Card>
-                    ))}
-                </div>
+export function HowItWorksSection() {
+  return (
+    <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 relative">
+      <div
+        className="hidden lg:block absolute top-12 left-[15%] right-[15%] h-px bg-gradient-to-r from-transparent via-cyan-200 to-transparent"
+        aria-hidden="true"
+      />
 
-                {/* Stats Banner */}
-                <div className="mt-16 bg-gradient-to-r from-primary to-accent rounded-2xl p-8 text-center text-white">
-                    <p className="text-lg font-semibold">
-                        ⚡ Average wait time: <span className="font-bold">under 15 minutes</span>
-                    </p>
-                </div>
-            </div>
-        </section>
-    );
+      {process.map((item, i) => (
+        <motion.div
+          key={item.step}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.4, delay: i * 0.1 }}
+          className="text-center relative"
+        >
+          <div className="w-16 h-16 mx-auto mb-5 rounded-full bg-gradient-to-br from-cyan-500 to-teal-600 flex items-center justify-center shadow-lg relative overflow-hidden">
+            <div
+              className="absolute top-1 right-1 w-6 h-6 bg-white/10 rounded-full"
+              aria-hidden="true"
+            />
+            <span className="text-lg font-bold text-white relative z-10">
+              {item.step}
+            </span>
+          </div>
+
+          <h3 className="text-lg font-bold text-gray-900 mb-2">
+            {item.title}
+          </h3>
+          <p className="text-gray-500 text-sm leading-relaxed max-w-[220px] mx-auto">
+            {item.description}
+          </p>
+        </motion.div>
+      ))}
+    </div>
+  );
 }

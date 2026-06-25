@@ -7,9 +7,22 @@ import {
     Building2,
     CheckCircle2,
     Handshake,
+    Syringe,
+    Home,
 } from 'lucide-react'
 
-const CORE_SERVICES = [
+const core_services = [
+    {
+        icon: Syringe,
+        title: 'Disease Treatment, Management & Vaccinations',
+        description:
+            'Expert care for acute and chronic conditions, plus preventive vaccinations to keep you healthy.',
+        features: [
+            'Comprehensive treatment plans',
+            'Chronic disease management',
+            'Preventive vaccinations',
+        ],
+    },
     {
         icon: Video,
         title: 'Virtual Consultations',
@@ -20,7 +33,17 @@ const CORE_SERVICES = [
             'Secure & encrypted',
             'Prescriptions sent digitally',
         ],
-        badge: 'Most Popular',
+    },
+    {
+        icon: Home,
+        title: 'Home-Based Care',
+        description:
+            'Registered nurses provide in-home care for recovery, chronic conditions, post-surgery support, elderly patients, and individuals with mobility challenges who prefer care at home.',
+        features: [
+            'Skilled nursing at home',
+            'Post-surgery recovery support',
+            'Chronic condition management',
+        ],
     },
     {
         icon: Building2,
@@ -32,7 +55,6 @@ const CORE_SERVICES = [
             'Modern equipment',
             'Comfortable environment',
         ],
-        badge: null,
     },
     {
         icon: Handshake,
@@ -44,7 +66,6 @@ const CORE_SERVICES = [
             'Seamless record transfer',
             'Follow-up coordination',
         ],
-        badge: null,
     },
 ]
 
@@ -54,7 +75,8 @@ const care_models = [
         label: 'Virtual Care',
         title: 'Healthcare from Anywhere',
         image: '/virtual-care.jpg',
-        description: 'Our telemedicine platform lets you consult licensed doctors via secure video - no travel, no waiting rooms. Ideal for follow-ups, mental health, and non-emergency consultations.',
+        description:
+            'Our telemedicine platform lets you consult licensed doctors via secure video - no travel, no waiting rooms. Ideal for follow-ups, mental health, and non-emergency consultations.',
         points: [
             'Video consultations on any device',
             'Digital prescriptions & sick notes',
@@ -67,7 +89,8 @@ const care_models = [
         label: 'Physical Facility',
         title: 'Hands-On When You Need It',
         image: '/inpatient-care.jpg',
-        description: 'Some things need a human touch. Our clinic is equipped for examinations, lab work, minor procedures, and vaccinations - with the same team you trust online.',
+        description:
+            'Some things need a human touch. Our clinic is equipped for examinations, lab work, minor procedures, and vaccinations - with the same team you trust online.',
         points: [
             'Modern, comfortable clinic space',
             'On-site lab & basic diagnostics',
@@ -127,10 +150,10 @@ export function ServicesPage() {
                         <div className="flex-grow h-px bg-gradient-to-r from-transparent via-primary to-transparent max-w-[150px]" />
                     </div>
                     <p className="text-gray-600 text-lg leading-relaxed">
-                        Whether you need a virtual consultation from home, a
-                        hands-on visit at our clinic, or a referral to a
-                        specialist - we&apos;ve got you covered. Quality
-                        healthcare, your way.
+                        Whether you need a virtual consultation from home,
+                        home-based treatment, an in-person visit at our clinic,
+                        or a referral to a specialist - we&apos;ve got you
+                        covered. Quality healthcare, your way.
                     </p>
                 </motion.div>
 
@@ -147,7 +170,7 @@ export function ServicesPage() {
                             How We Serve You
                         </span>
                         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                            Three Ways to Get Care
+                            Ways to Get Care From BioMedLink
                         </h2>
                         <p className="text-gray-600 text-lg">
                             Choose the care model that fits your situation. Start
@@ -156,7 +179,7 @@ export function ServicesPage() {
                     </motion.div>
 
                     <div className="grid md:grid-cols-3 gap-6">
-                        {CORE_SERVICES.map((service, i) => {
+                        {core_services.map((service, i) => {
                             const Icon = service.icon
                             return (
                                 <motion.div
@@ -183,17 +206,19 @@ export function ServicesPage() {
                                         </p>
 
                                         <div className="space-y-2">
-                                            {service.features.map((feature) => (
-                                                <div
-                                                    key={feature}
-                                                    className="flex items-center gap-2"
-                                                >
-                                                    <CheckCircle2 className="w-4 h-4 text-cyan-600 flex-shrink-0" />
-                                                    <span className="text-gray-600 text-sm">
-                                                        {feature}
-                                                    </span>
-                                                </div>
-                                            ))}
+                                            {service.features.map(
+                                                (feature) => (
+                                                    <div
+                                                        key={feature}
+                                                        className="flex items-center gap-2"
+                                                    >
+                                                        <CheckCircle2 className="w-4 h-4 text-cyan-600 flex-shrink-0" />
+                                                        <span className="text-gray-600 text-sm">
+                                                            {feature}
+                                                        </span>
+                                                    </div>
+                                                )
+                                            )}
                                         </div>
                                     </div>
                                 </motion.div>
@@ -201,7 +226,6 @@ export function ServicesPage() {
                         })}
                     </div>
                     <div />
-
                 </div>
 
                 {/* Care Models */}
@@ -220,43 +244,29 @@ export function ServicesPage() {
                             The Best of Both Worlds
                         </h2>
                         <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-                            We combine the convenience of telemedicine with the reliability of a
-                            physical clinic - so you always get the right type of care.
+                            We combine the convenience of telemedicine with the
+                            reliability of a physical clinic - so you always get
+                            the right type of care.
                         </p>
                     </motion.div>
 
                     {care_models.map((model, i) => {
                         const Icon = model.icon
+                        const isOdd = i % 2 === 1
 
                         return (
                             <div
                                 key={model.label}
-                                className="grid md:grid-cols-2 gap-12 items-center mb-20"
+                                className="grid md:grid-cols-2 gap-10 md:gap-12 items-center mb-20"
                             >
-                                {i % 2 === 1 && (
-                                    <motion.div
-                                        initial={{ opacity: 0, x: -20 }}
-                                        whileInView={{ opacity: 1, x: 0 }}
-                                        viewport={{ once: true }}
-                                        transition={{ duration: 0.5 }}
-                                        className="order-1"
-                                    >
-                                        <Image
-                                            src={model.image}
-                                            alt={model.title}
-                                            width={420}
-                                            height={420}
-                                            className="w-full h-[420px] object-cover rounded-3xl shadow-xl"
-                                        />
-                                    </motion.div>
-                                )}
-
                                 <motion.div
                                     initial={{ opacity: 0, y: 20 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
                                     transition={{ duration: 0.5 }}
-                                    className={i % 2 === 1 ? "order-2" : ""}
+                                    className={
+                                        isOdd ? 'md:order-2' : 'md:order-1'
+                                    }
                                 >
                                     <div className="bg-gradient-to-br from-cyan-500 to-teal-600 rounded-3xl p-8 md:p-10 text-white relative overflow-hidden">
                                         <div className="absolute top-4 right-4 w-28 h-28 bg-white/10 rounded-full" />
@@ -296,22 +306,26 @@ export function ServicesPage() {
                                     </div>
                                 </motion.div>
 
-                                {i % 2 === 0 && (
-                                    <motion.div
-                                        initial={{ opacity: 0, x: 20 }}
-                                        whileInView={{ opacity: 1, x: 0 }}
-                                        viewport={{ once: true }}
-                                        transition={{ duration: 0.5 }}
-                                    >
-                                        <Image
-                                            src={model.image}
-                                            alt={model.title}
-                                            width={420}
-                                            height={420}
-                                            className="w-full h-[420px] object-cover rounded-3xl shadow-xl"
-                                        />
-                                    </motion.div>
-                                )}
+                                <motion.div
+                                    initial={{
+                                        opacity: 0,
+                                        x: isOdd ? -20 : 20,
+                                    }}
+                                    whileInView={{ opacity: 1, x: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ duration: 0.5 }}
+                                    className={
+                                        isOdd ? 'md:order-1' : 'md:order-2'
+                                    }
+                                >
+                                    <Image
+                                        src={model.image}
+                                        alt={model.title}
+                                        width={420}
+                                        height={420}
+                                        className="w-full h-[420px] object-cover rounded-3xl shadow-xl"
+                                    />
+                                </motion.div>
                             </div>
                         )
                     })}
@@ -339,7 +353,6 @@ export function ServicesPage() {
                     </motion.div>
 
                     <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 relative">
-                        {/* Connecting line — desktop */}
                         <div
                             className="hidden lg:block absolute top-12 left-[15%] right-[15%] h-px bg-gradient-to-r from-transparent via-cyan-200 to-transparent"
                             aria-hidden="true"
@@ -351,10 +364,12 @@ export function ServicesPage() {
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
-                                transition={{ duration: 0.4, delay: i * 0.1 }}
+                                transition={{
+                                    duration: 0.4,
+                                    delay: i * 0.1,
+                                }}
                                 className="text-center relative"
                             >
-                                {/* Step number */}
                                 <div className="w-16 h-16 mx-auto mb-5 rounded-full bg-gradient-to-br from-cyan-500 to-teal-600 flex items-center justify-center shadow-lg relative overflow-hidden">
                                     <div
                                         className="absolute top-1 right-1 w-6 h-6 bg-white/10 rounded-full"
@@ -375,7 +390,6 @@ export function ServicesPage() {
                         ))}
                     </div>
                 </div>
-
             </div>
         </section>
     )

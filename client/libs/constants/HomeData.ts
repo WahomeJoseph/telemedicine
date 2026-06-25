@@ -11,39 +11,6 @@ export const SERVICES = [
   { icon: '🔬', title: 'HIV Testing and Counseling', desc: 'Comprehensive testing and support services.', color: 'from-cyan-500 to-teal-500' },
 ];
 
-export const DOCTORS = [
-  {
-    name: 'Dr. Sarah Johnson',
-    specialty: 'Cardiologist',
-    experience: '12 years',
-    rating: 4.9,
-    image: '/doctors/cardiologist.jpg',
-    linkedin: "https://linkedin.com/in/dr-sarah-johnson",
-    twitter: "https://twitter.com/drsarahjohnson",
-    email: "sarah.johnson@biomedlink.com",
-  },
-  {
-    name: 'Dr. Michael Chen',
-    specialty: 'Neurologist',
-    experience: '15 years',
-    rating: 4.8,
-    image: '/doctors/neurologist.jpg',
-    linkedin: "https://linkedin.com/in/dr-michael-chen",
-    twitter: "https://twitter.com/drmichaelchen",
-    email: "michael.chen@biomedlink.com",
-  },
-  {
-    name: 'Dr. Amina Hassan',
-    specialty: 'Pediatrician',
-    experience: '10 years',
-    rating: 5.0,
-    image: '/doctors/pediatrician.jpg',
-    linkedin: "https://linkedin.com/in/dr-amina-hassan",
-    twitter: "https://twitter.com/draminahassan",
-    email: "amina.hassan@biomedlink.com",
-  },
-];
-
 export const TESTIMONIALS = [
   {
     name: 'John Mwangi',
